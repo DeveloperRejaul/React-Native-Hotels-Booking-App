@@ -1,0 +1,32 @@
+export const comName = {
+  Main: 'main-screen',
+  BottomTabRoute: 'buttom-tab-route',
+  Home: 'home-screen',
+  Moorinfo: 'Moorinfo-screen',
+  Search: 'search-screen',
+  Message: 'message-screen',
+  editProfile: 'edit-profile-screen',
+  notification: 'notification-screen',
+  favorit: 'favorit-list-screen',
+  reviews: 'reviews-screen',
+  hotelDetails: 'hotel-details-screen',
+  roomDetails: 'room-details-screen',
+  location: 'location-screen',
+  selectDate: 'select-date-screen',
+  seeAllHotels: 'see-all-hotels-screen',
+  chatUI: 'chatUI-screen',
+  YourProfile: 'Your-profile-screen',
+  createHotelPost: 'create-hotel-post-screen',
+  // Auth Stack Component Name
+  WelcomeShooseOption: 'Welcome-Shoose-Option-screen',
+  Login: 'login-screen',
+  Signup: 'signup-screen',
+  forgotPassword: 'forgot-password-screen',
+  resetPassword: 'reset-password-screen',
+  // Onbarding UI component Name
+  onboarding01: 'Onboarding01-screen',
+  onboarding02: 'Onboarding02-screen',
+  onboarding03: 'Onboarding03-screen',
+  // Splass screen UI component Name
+  spless: 'splass - screen',
+};
