@@ -1,1 +1,1 @@
-# React-Native-Hotels-Booking-App
+# React Native Hotels Booking App

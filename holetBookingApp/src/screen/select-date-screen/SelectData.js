@@ -10,5 +10,4 @@ const SelectData = () => {
 };
 
 export default SelectData;
-
 const styles = StyleSheet.create({});

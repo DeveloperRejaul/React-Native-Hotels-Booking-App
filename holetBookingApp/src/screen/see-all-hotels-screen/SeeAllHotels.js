@@ -6,16 +6,19 @@ import {
   Image,
   Pressable,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {rw, rf, rh} from '../../constent/responsivedimensions.js';
-import HeaderCom from '../../components/HeaderCom.jsx';
 import Ionicon from 'react-native-vector-icons/Ionicons.js';
 import {COLORS} from '../../constent/colors.js';
 import BtnCom from '../../components/BtnCom.js';
-import {imagePhat} from '../../constent/imagePhat.js';
 import {comName} from '../../constent/componentName.js';
+import {useSelector} from 'react-redux';
+import InputCom from '../../components/InputCom.js';
 
 const SeeAllHotels = ({navigation, route}) => {
+  const [search, setSearch] = useState('');
+  const reduxHotelsData = useSelector(state => state.hotelsData.hotelsData);
+
   // Navigate to hotel details screen
   const hotelDetails = data => {
     navigation.navigate(comName.hotelDetails, {
@@ -35,13 +38,22 @@ const SeeAllHotels = ({navigation, route}) => {
 
   return (
     <View style={styles.container}>
-      <HeaderCom
-        text={route.params.title}
-        onPress={() => navigation.goBack()}
+      <InputCom
+        placeholder={'Seach..'}
+        leftIconName="search-outline"
+        rightIconName={'mic-outline'}
+        onChangeText={setSearch}
+        value={search}
       />
+      <View style={styles.hotelContentTitle}>
+        <Text></Text>
+        <Text style={styles.TypeTitle}>Popular</Text>
+        <Text style={styles.catagorySeeAll}>See all</Text>
+      </View>
+
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.scroll}>
-          {route.params.data.map(ele => (
+          {reduxHotelsData.map(ele => (
             <View style={styles.card} key={Math.random()}>
               {/* Image part */}
               <View style={styles.imageBody}>
@@ -58,15 +70,7 @@ const SeeAllHotels = ({navigation, route}) => {
               <View style={styles.btnBody}>
                 <View>
                   <Text>${ele.price} per night</Text>
-                  <Text
-                    style={styles.reviews}
-                    onPress={() =>
-                      navigation.navigate(comName.reviews, {
-                        image: ele.image,
-                        hotelName: ele.hotelName,
-                        reviews: ele.reviews,
-                      })
-                    }>
+                  <Text style={styles.reviews}>
                     <Ionicon name="star" color={'#fccd37'} />
                     <Ionicon name="star" color={'#fccd37'} />
                     <Ionicon name="star" color={'#fccd37'} />
@@ -132,4 +136,22 @@ const styles = StyleSheet.create({
   },
   btnText: {fontSize: rf(2.2)},
   card: {paddingBottom: rh(2)},
+  catagorySeeAll: {
+    fontSize: rf(2),
+    color: '#4fb8fe',
+    fontWeight: '400',
+    paddingBottom: 5,
+    textDecorationLine: 'underline',
+  },
+  TypeTitle: {
+    fontSize: rf(2.7),
+    fontWeight: '700',
+    color: '#445682',
+  },
+  hotelContentTitle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: rh(1),
+  },
 });

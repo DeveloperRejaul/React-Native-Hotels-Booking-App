@@ -7,10 +7,16 @@ import Ionicon from 'react-native-vector-icons/Ionicons.js';
 import Mrticon from 'react-native-vector-icons/MaterialCommunityIcons.js';
 import {comName} from '../../constent/componentName.js';
 import BtnCom from '../../components/BtnCom.js';
+import {useSelector} from 'react-redux';
 
 const HotelDetails = ({navigation, route}) => {
-  const {data} = route.params;
-
+  const reduxHotesData = useSelector(state => state.hotelsData.hotelsData[0]);
+  let data;
+  if (route.params == undefined) {
+    data = reduxHotesData;
+  } else {
+    data = route.params.data;
+  }
   return (
     <View style={styles.container}>
       <HeaderCom text={'Hotel Details'} onPress={() => navigation.goBack()} />

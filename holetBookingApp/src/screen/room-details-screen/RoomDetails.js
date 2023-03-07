@@ -50,6 +50,7 @@ const RoomDetails = ({navigation, route}) => {
                   text={'Book Now'}
                   containerStyle={styles.btn}
                   textStyle={styles.btnText}
+                  onPress={() => navigation.navigate(comName.selectDate)}
                 />
               </View>
             </View>

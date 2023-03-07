@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   Image,
   KeyboardAvoidingView,
+  Keyboard,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import Ionicon from 'react-native-vector-icons/Ionicons.js';

@@ -28,5 +28,8 @@ export const comName = {
   onboarding02: 'Onboarding02-screen',
   onboarding03: 'Onboarding03-screen',
   // Splass screen UI component Name
-  spless: 'splass - screen',
+  spless: 'splass-screen',
+  booking: 'booking-screen',
+  newBooking: 'new-booking-screen',
+  cancleBooking: 'cancle-booking-screen',
 };

@@ -4,6 +4,7 @@ import HeaderCom from '../../components/HeaderCom.jsx';
 import {COLORS} from '../../constent/colors.js';
 import {rf, rh, rw} from '../../constent/responsivedimensions.js';
 import IoniIcon from 'react-native-vector-icons/Ionicons.js';
+import {imagePhat} from '../../constent/imagePhat.js';
 
 const Reviews = ({route, navigation}) => {
   return (
@@ -12,10 +13,10 @@ const Reviews = ({route, navigation}) => {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.scroll}>
-          {route.params.reviews.map(ele => (
+          {[1, 2, 3, 4, 5, 6].map(ele => (
             <View key={Math.random()} style={styles.card}>
               <View style={styles.imageBody}>
-                <Image source={route.params.image} style={styles.image} />
+                <Image source={imagePhat.cardImage_01} style={styles.image} />
               </View>
               <View style={styles.contentBody}>
                 <IoniIcon
@@ -24,8 +25,8 @@ const Reviews = ({route, navigation}) => {
                   color={'#4791f2'}
                 />
                 <View style={styles.contentInner}>
-                  <Text style={styles.name}> {route.params.hotelName}</Text>
-                  <Text style={styles.reviews}>{ele}</Text>
+                  <Text style={styles.name}> {`Hotel Cox`}</Text>
+                  <Text style={styles.reviews}>{'very expencive '}</Text>
                 </View>
               </View>
             </View>
