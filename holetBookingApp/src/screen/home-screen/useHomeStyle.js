@@ -9,7 +9,7 @@ export default function useHomeStyle() {
       flex: 1,
     },
     body: {
-      paddingHorizontal: rw(4),
+      // paddingHorizontal: rw(4),
       paddingTop: rh(1),
     },
     catagorySeeAll: {

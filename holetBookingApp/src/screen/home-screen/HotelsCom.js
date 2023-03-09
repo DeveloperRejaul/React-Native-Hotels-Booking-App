@@ -1,7 +1,7 @@
 import {Pressable, ScrollView, Text, View, Image} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import useHomeStyle from './useHomeStyle.js';
-import {rf} from '../../constent/responsivedimensions.js';
+import {rf, rw} from '../../constent/responsivedimensions.js';
 import {catagoryData} from '../../constent/catagoryData.js';
 import {COLORS} from '../../constent/colors.js';
 import MrtIcon from 'react-native-vector-icons/MaterialIcons.js';
@@ -38,7 +38,7 @@ const HotelsCom = () => {
     <View>
       {/* Catagory View */}
       <View>
-        <View style={styles.catagoryHader}>
+        <View style={[styles.catagoryHader, {paddingHorizontal: rw(4)}]}>
           <Text></Text>
           <Text style={styles.chooseTitle}>Choose Hotel</Text>
           <Pressable
@@ -52,7 +52,7 @@ const HotelsCom = () => {
           </Pressable>
         </View>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <View style={styles.scrollView}>
+          <View style={[styles.scrollView, {paddingHorizontal: rw(4)}]}>
             {catagoryData.map(e => (
               <Pressable
                 style={styles.catagory}

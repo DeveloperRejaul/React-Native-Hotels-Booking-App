@@ -32,4 +32,5 @@ export const comName = {
   booking: 'booking-screen',
   newBooking: 'new-booking-screen',
   cancleBooking: 'cancle-booking-screen',
+  Payment: 'Payment-screen',
 };

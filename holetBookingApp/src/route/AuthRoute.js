@@ -19,7 +19,7 @@ const AuthRoute = ({Stack}) => {
       }}>
       {<>{splass && SplassStack(Stack)}</>}
       {<>{onbordingUI && OnboardingUIStack(Stack)}</>}
-      {!true ? <>{AuthStack(Stack)}</> : <>{MainStack(Stack)}</>}
+      {!false ? <>{AuthStack(Stack)}</> : <>{MainStack(Stack)}</>}
     </Stack.Navigator>
   );
 };

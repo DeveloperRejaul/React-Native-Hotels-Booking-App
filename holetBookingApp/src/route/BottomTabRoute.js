@@ -11,6 +11,7 @@ import MtcIcon from 'react-native-vector-icons/MaterialCommunityIcons.js';
 import HotelDetails from '../screen/hotel-details-screen/HotelDetails.js';
 import Booking from '../screen/Booking-screen/Booking.js';
 import SeeAllHotels from '../screen/see-all-hotels-screen/SeeAllHotels.js';
+import SelectData from '../screen/select-date-screen/index.js';
 
 export default function BottomTabRoute() {
   const Tab = createBottomTabNavigator();

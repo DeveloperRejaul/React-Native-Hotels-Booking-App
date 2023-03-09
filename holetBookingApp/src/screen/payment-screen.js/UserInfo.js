@@ -1,13 +1,12 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const SelectData = () => {
+export default function UserInfo() {
   return (
     <View>
-      <Text>SelectData</Text>
+      <Text>UserInfo</Text>
     </View>
   );
-};
+}
 
-export default SelectData;
 const styles = StyleSheet.create({});
