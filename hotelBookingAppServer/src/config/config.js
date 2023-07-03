@@ -5,7 +5,7 @@ const config = {
     // process.env.PORT ||
   },
   db: {
-    url: process.env.DBURL || "mongodb://127.0.0.1:27017/hotelApp",
+    url: "mongodb://127.0.0.1:27017/hotelApp",
     // process.env.DBURL ||
   },
 };

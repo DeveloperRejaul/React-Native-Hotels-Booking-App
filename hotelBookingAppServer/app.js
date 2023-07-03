@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 dbConnect();
+app.use(express.static("src/uploads"));
 
 // user routes
 app.use("/users", userRoute);

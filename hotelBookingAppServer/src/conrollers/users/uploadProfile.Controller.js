@@ -1,6 +1,6 @@
 const Users = require("../../models/users.signup.model.js");
 
-const uploadProfileController = async (req, res, next) => {
+const uploadProfileController = async (req, res) => {
   try {
     const { id } = req.params;
     const updateProfilePicture = await Users.findOneAndUpdate(
